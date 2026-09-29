@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Desenvolvedor Web">
+    <meta name="keywords" content="HTML5, semântica, desenvolvimento">
     <title>Estrutura Semântica</title>
+    <link rel="stylesheet" href="/Estilizando_com_CSS/07_semantica.css">
 </head>
 <body>
     <!-- Cabeçalho da pagina -->
-     <header>
+     <header class="cabecalho-principal">
         <h1>Meu site Pessoal</h1>
-        <nav>
+        <nav class="menu-principal">
             <ul>
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#sobre">Sobre</a></li>
@@ -18,15 +21,17 @@
             </ul>
         </nav>
      </header>
+
      <!-- Conteudo principal do Site -->
-      <main>
-        <section id="inicio">
+      <main class="conteudo-principal">
+        <section id="inicio" class="secao-destaque">
             <h2>Bem vindo ao meu Site</h2>
             <p>Este é um exemplo de estrutura semântica em HTML5.</p>
         </section>
         <hr>
+
         <!-- Artigo Independente -->
-         <article>
+         <article class="artigo-blog">
             <header>
                 <h2>Artigos Sobre HTmL5</h2>
                 <time datetime="2026-09-22"> 22 de Setembro, 2026</time>
@@ -39,7 +44,7 @@
          <hr>
 
          <!-- Seção de Serviços -->
-          <section id="servicos">
+          <section id="servicos" class="secao-servicos">
             <h2> Nossos Serviços</h2>
             <article>
                 <h3>Desenvolvimento Web</h3>
@@ -48,8 +53,9 @@
           </section>
       </main>
       <hr>
+
       <!-- Barra Lateral -->
-       <aside>
+       <aside class="barra-lateral">
         <h3>Links úteis</h3>
         <ul>
             <li><a href="https://www.w3c.org">W3C</a></li>
@@ -57,7 +63,9 @@
         </ul>
        </aside>
        <hr>
-       <footer>
+
+       <!-- Rodapé -->
+       <footer class="rodape-principal">
             <p>&copy; Meu site. Todos os direitos reservados.</p>
             <address>
                 Contato: <a href="mailto:miguelbklem10@gmail.com">miguelbklem10@gmail.com</a>               
