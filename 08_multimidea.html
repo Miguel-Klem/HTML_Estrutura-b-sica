@@ -3,84 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Tabelas Avançadas e Multimédia</title>
-    <style>
-        /* Define a largura da tabela para 50% de largura do
-        elemento pai (normalmente o body) */
-        table {
-            width: 50%; /* Tabela fica proporcionalmente menor e
-            mais compacta */
-
-            /* Remove o espaçamento entre células adjacentes para
-            apresentar bordas únicas */
-            border-collapse: collapse;
-
-            /* Espaço inferior para separar visualmente da
-            próxima seção */
-            margin-bottom: 20px;
-        }
-
-        /* Aplica borda e espaçamento interno tanto em
-        cabeçalhos (th) quanto nas células (tr) */
-        th, td {
-            border: 1px solid #111111; /* bordas finas sólidas
-            de 1px */
-            padding: 8px;              /* espaçamento interno para
-            "respirar" o conteúdo */
-        }
-
-        /* Estiliza as células do cabeçalho */
-        th {
-            background-color: #333; /* Fundo escuro para
-            destaque */
-            color: #ffffff;          /* Texto branco para
-            contraste e legibilidade */
-        }
-
-        /* Estiliza a linha do rodapé da tabela */
-        tfoot {
-            background-color: #ffffcc; /* Fundo amarelo claro
-            para chamar atenção */
-            font-weight: bold;         /* Texto em negrito para
-            importância */
-        }
-
-        /* Classe para alinhar texto à direita (útil para
-        números e valores monetários) */
-        .num-right {
-            text-align: right; /* Valores alinhados à direita
-            facilitam leitura numérica */
-        }
-    </style>
+    <link rel="stylesheet" href="/Estilizando_com_CSS/08_tab_multimidea.css">
 </head>
 <body>
     <h1>Relatório de Vendas</h1>
 
     <!-- TABELA SIMPLIFICADA E MAIS COMPACTA -->
-    <table>
-        <caption>Vendas por Região - 2024</caption>
+    <table class="tabela-relatorio">
+        <caption>Vendas por Região - 2026</caption>
         <thead>
             <tr>
+
                 <!-- Cabeçalho para a coluna Região -->
                 <th>Região</th>
+
                 <!-- Cabeçalho para os trimestres -->
-                <th>1º Trim/th>
-                <th>2º Trim/th>
-                <th>3º Trim/th>
+                <th class="num-right">1º Trim</th>
+                <th class="num-right">2º Trim</th>
+                <th class="num-right">3º Trim</th>
+                
                 <!-- Cabeçalho para o total geral -->
-                <th>Total</th>
+                <th class="num-right">Total</th>
             </tr>
         </thead>
         <tbody>
             <tr>
+
                 <!-- Linha de dados para a região Norte -->
                 <td>Norte</td>
                 <td class="num-right">R$ 10.000</td>
                 <td class="num-right">R$ 12.000</td>
                 <td class="num-right">R$ 15.000</td>
-                <td class="num-right"><strong>R$ 37.000</strong></td>
+                <td class="num-right total linha"><strong>R$ 37.000</strong></td>
             </tr>
         </tbody>
         <tfoot>
+
             <!-- Rodapé com total geral -->
             <tr>
                 <td>Total Geral</td>
@@ -97,21 +55,20 @@
     <!-- MULTIMÉDIA EM HTML5 -->
 
     <h2>Inserindo vídeos locais</h2>
-    <!-- Vídeo usando um arquivo local, com largura fixa e
-    imagem inicial (poster) -->
-    <video width="500" poster="assets/lanave-capa.png" controls>
+
+    <!-- Vídeo usando um arquivo local, com largura fixa e imagem inicial (poster) -->
+    <video class="video-local" width="500" poster="assets/lanave-capa.png" controls>
         <source src="assets/meu-video.mp4" type="video/mp4">
-        <!-- Mensagem que aparece se o navegador não suportar a
-        tag vídeo -->
+
+        <!-- Mensagem que aparece se o navegador não suportar a tag vídeo -->
         Seu navegador não suporta vídeo HTML5.
     </video>
-
     <hr>
 
     <h2>Inserindo vídeos do Youtube</h2>
-    <!-- Vídeo incorporado via iframe com configurações para
-    controle de permissões -->
-    <iframe width="560" height="315"
+
+    <!-- Vídeo incorporado via iframe com configurações para controle de permissões -->
+    <iframe class="video-youtube" width="560" height="315"
         src="https://www.youtube.com/embed/reqm?start="
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write;
@@ -122,13 +79,13 @@
     <hr>
 
     <h2>Vamos aprender a reproduzir áudios em HTML5.</h2>
-    <!-- Reprodução de áudio com autoplay e controlos visíveis
-    -->
-    <audio preload="metadata" autoplay controls>
+    <!-- Reprodução de áudio com autoplay e controlos visíveis -->
+    <audio class="player-audio" preload="metadata" autoplay controls>
         <source src="assets/happy-mistake.mp3" type="audio/mpeg">
-        <!-- Mensagem alternativa caso áudio não seja suportado
-        -->
+
+        <!-- Mensagem alternativa caso áudio não seja suportado -->
         Seu navegador não suporta áudio HTML5.
     </audio>
+
 </body>
 </html>
