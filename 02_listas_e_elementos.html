@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas em HTML</title>
+</head>
+<body>
+    <h1> Diferentes tipos de listas em HTML</h1>
+
+<!-- Lista não numerada (sem ordem) -->
+    <h2>Lista de compras (não numerada)</h2>
+    <!--
+        Tipos de marcadores possíveis para <ul> (Via CSS list-style-type):
+            disc    - Bolinha sólida padrão 
+            circle  - Circulo vazado 
+            square  - Quadrado sólido
+            none    - Sem marcador
+            Exemplo de troca: <ul style="list-style-type: square;"/> 
+    -->
+    <ul style="list-style-type: disc;">
+        <li>Arroz</li>
+        <li>Feijão</li>
+        <li>Carne</li>
+        <li>Verduras</li>
+    </ul>
+    <hr>
+    <!-- Lista numerada (em ordem) -->
+     <h2>Passos para fazer um bom café (numerada)</h2>
+    <!-- 
+       Lista de marcadores para lista ordenada <ol> (via CSS list-style-type):
+            decimal - Números decimais (1, 2, 3...)
+            lower_alpha - Letras minúsculas (a, b, c...)
+            upper_alpha - Letras maiúsculas (A, B, C...)
+            lower_roman - Números romanos minúsculos (i, ii, iii...)
+            upper_roman - Números romanos maiúsculos (I, II, III...)
+            none - Sem marcador
+            Exemplo de troca: <ol style="list-style-type: upper-alpha;"/> 
+    -->
+    <ol style="list-style-type: decimal;">
+        <li>Ferva a água</li>
+        <li>Coloque o pó no filtro</li>
+        <li>Despeje a água quente</li>
+        <li>Aguardar coar</li>
+    </ol>
+    <hr>
+
+    <!-- Lista de definições: Ultilizada para exibir termos e suas definições -->
+     <h2>Glossário de termos (lista de definições)</h2>
+     <!-- Lista de marcadores para listas de definições <dl> (vis CSS list-style-type):
+        <dl>    -Lista de definição
+        <dt>    -Termo a ser definido
+        <dd>    -definição/descrição do termo
+        Não possui marcador visual, apenas o alinhamento
+    -->
+    <dl>
+        <dt>HTML</dt>
+        <dd>HyperText Markup Language - Linguagem de marcação para web</dd>
+        <dt>CSS</dt>
+        <dd>Casding Style Sheets - Folha de estilo em cascata</dd>
+    </dl>
+    <hr>
+
+    <!-- Lista encadeada (aninhada): misturando ul e ol -->
+    <h2>Lista encadeada</h2>
+    <!-- 
+        Lembre-se: Você pode misturar <ul> e <ol> em níveis diferentes
+        Além de mudar o tipo de uma com 'style="list-style-type: ...;"' 
+    -->
+    <ul>
+        <li>Frutas
+            <!-- Sublista não ordenada: Pode alterar o estilo  aqui -->
+            <!-- Exemplo: list-style-type: circle; -->
+            <ul style="list-style-type: circle;">
+                <li>Maça</li>
+                <li>Banana</li>
+            </ul>
+        </li>
+        <li>Verduras
+            <!-- Sublista numerada: Pode usar letras, números, romanos, etc. -->
+             <!-- Exemplo: list-style-type: lower-alpha; -->
+            <ol style="list-style-type: lower-alpha;" >
+                <li>Alface</li>
+                <li>Tomate</li>
+            </ol>
+        </li>
+    </ul>
+    <hr>
+
+ </body>
+</html>
